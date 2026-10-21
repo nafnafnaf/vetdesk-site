@@ -1,0 +1,23 @@
+---
+import { ui, type Lang } from '../i18n/ui';
+import { site } from '../config';
+import Socials from './Socials.astro';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang].footer;
+---
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot">
+      <div>
+        <div class="brand">VetDesk</div>
+        <p class="muted" style="margin:0;">{t.tagline}</p>
+      </div>
+      <div>
+        <p class="muted small" style="margin:0 0 8px;">{t.follow}</p>
+        <Socials />
+      </div>
+    </div>
+    <p class="copy">© {new Date().getFullYear()} {site.name}. {t.rights}</p>
+  </div>
+</footer>

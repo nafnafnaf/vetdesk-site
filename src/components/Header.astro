@@ -1,0 +1,47 @@
+---
+import { ui, homePath, type Lang } from '../i18n/ui';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const base = homePath(lang);
+const other = lang === 'el' ? '/en/' : '/';
+const links = [
+  ['features', t.nav.features],
+  ['how', t.nav.how],
+  ['greece', t.nav.greece],
+  ['pricing', t.nav.pricing],
+  ['faq', t.nav.faq],
+] as const;
+---
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" href={base} aria-label="VetDesk">
+      <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+        <circle cx="9" cy="13" r="3.2" /><circle cx="16" cy="9" r="3.2" /><circle cx="23" cy="13" r="3.2" /><circle cx="27" cy="20" r="2.6" /><circle cx="5" cy="20" r="2.6" />
+        <path d="M16 15c-4.500 0-8 3.600-8 7 0 2.300 1.900 3.600 4 3.200 1.400-.3 2.400-.8 4-.8s2.600.5 4 .8c2.100.4 4-.9 4-3.200 0-3.400-3.500-7-8-7z" />
+      </svg>
+      <span>VetDesk</span>
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      {links.map(([id, label]) => <a href={`${base}#${id}`}>{label}</a>)}
+    </nav>
+
+    <div class="actions">
+      <a class="lang" href={other} hreflang={lang === 'el' ? 'en' : 'el'} lang={lang === 'el' ? 'en' : 'el'}>{t.langSwitch}</a>
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label={t.themeLabel}>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.500" /><path d="M12 2v2M12 20v2M4.900 4.900l1.400 1.400M17.700 17.700l1.400 1.400M2 12h2M20 12h2M4.900 19.100l1.400-1.400M17.700 6.300l1.400-1.400" /></svg>
+      </button>
+      <a class="btn btn-primary btn-sm" href={`${base}#contact`}>{t.cta.demo}</a>
+      <details class="mobile-nav">
+        <summary class="icon-btn" aria-label={t.menuLabel}>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+        </summary>
+        <div class="panel">
+          {links.map(([id, label]) => <a href={`${base}#${id}`}>{label}</a>)}
+          <a href={`${base}#contact`}>{t.nav.contact}</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>

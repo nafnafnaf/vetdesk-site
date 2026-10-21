@@ -1,0 +1,25 @@
+---
+import { ui, type Lang } from '../i18n/ui';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang].greece;
+---
+<section id="greece" class="section">
+  <div class="container">
+    <div class="section-head center">
+      <h2>{t.title}</h2>
+      <p class="lead" style="margin-inline:auto;">{t.subtitle}</p>
+    </div>
+    <div class="grid grid-5">
+      {
+        t.items.map((it) => (
+          <div class="card">
+            <div class="check" aria-hidden="true">✓</div>
+            <h3>{it.title}</h3>
+            <p>{it.text}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

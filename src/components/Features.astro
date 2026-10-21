@@ -1,0 +1,52 @@
+---
+import { ui, type Lang } from '../i18n/ui';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang].features;
+---
+<section id="features" class="section">
+  <div class="container">
+    <div class="section-head center">
+      <h2>{t.title}</h2>
+      <p class="lead" style="margin-inline:auto;">{t.subtitle}</p>
+    </div>
+
+    {
+      t.items.map((f, i) => (
+        <div class:list={['feature-row', { flip: i % 2 === 1 }]}>
+          <div class="feature-copy">
+            <div class="feature-num">{String(i + 1).padStart(2, '0')}</div>
+            <h3>{f.title}</h3>
+            <p>{f.text}</p>
+          </div>
+          <div class="feature-media">
+            <video muted loop playsinline preload="none" data-lazy poster="/images/poster.svg" aria-label={f.title}>
+              <source src={`/videos/${f.id}.mp4`} type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  const vids = document.querySelectorAll<HTMLVideoElement>('video[data-lazy]');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (reduce || !('IntersectionObserver' in window)) {
+    vids.forEach((v) => v.setAttribute('controls', ''));
+  } else {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((en) => {
+          const v = en.target as HTMLVideoElement;
+          if (en.isIntersecting) v.play().catch(() => {});
+          else v.pause();
+        });
+      },
+      { threshold: 0.35 },
+    );
+    vids.forEach((v) => io.observe(v));
+  }
+</script>

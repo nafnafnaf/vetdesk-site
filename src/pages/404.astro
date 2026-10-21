@@ -1,0 +1,14 @@
+---
+import Base from '../layouts/Base.astro';
+import { ui } from '../i18n/ui';
+const t = ui.el;
+---
+<Base lang="el" path="/404.html" title={t.meta.notFound} description={t.meta.description} noindex>
+  <section class="center-page">
+    <div class="container">
+      <h1>{t.notFound.title}</h1>
+      <p class="lead" style="margin-inline:auto;">{t.notFound.text}</p>
+      <a class="btn btn-primary" href="/">{t.notFound.back}</a>
+    </div>
+  </section>
+</Base>

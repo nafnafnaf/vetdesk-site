@@ -1,0 +1,31 @@
+---
+import { ui, type Lang } from '../i18n/ui';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang].faq;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: t.items.map((i) => ({
+    '@type': 'Question',
+    name: i.q,
+    acceptedAnswer: { '@type': 'Answer', text: i.a },
+  })),
+};
+---
+<section id="faq" class="section">
+  <div class="container">
+    <div class="section-head center"><h2>{t.title}</h2></div>
+    <div class="faq">
+      {
+        t.items.map((i) => (
+          <details>
+            <summary>{i.q}</summary>
+            <p>{i.a}</p>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+</section>

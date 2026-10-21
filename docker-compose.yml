@@ -1,0 +1,23 @@
+services:
+  web:
+    build: .
+    container_name: vetdesk-site
+    restart: unless-stopped
+    environment:
+      # Local / behind a reverse proxy: plain HTTP on :80
+      SITE_ADDRESS: ":80"
+      # Standalone production with automatic HTTPS:
+      #   SITE_ADDRESS: "vetdesk.gr, www.vetdesk.gr"
+      # and publish 80 and 443 below.
+    ports:
+      - "8080:80"
+      # - "80:80"
+      # - "443:443"
+    volumes:
+      - ./media/videos:/srv/videos:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+  caddy_config:

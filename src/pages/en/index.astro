@@ -1,0 +1,9 @@
+---
+import Base from '../../layouts/Base.astro';
+import HomePage from '../../components/HomePage.astro';
+import { ui } from '../../i18n/ui';
+const t = ui.en;
+---
+<Base lang="en" path="/en/" title={t.meta.title} description={t.meta.description}>
+  <HomePage lang="en" />
+</Base>

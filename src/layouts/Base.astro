@@ -1,0 +1,90 @@
+---
+import '../styles/global.css';
+import { site } from '../config';
+import { ui, type Lang } from '../i18n/ui';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  lang: Lang;
+  path: string; // '/' or '/en/' (or '/404.html')
+  title: string;
+  description: string;
+  noindex?: boolean;
+}
+const { lang, path, title, description, noindex = false } = Astro.props;
+
+const canonical = new URL(path, site.url).href;
+const ogImage = new URL('/og.png', site.url).href;
+const ogLocale = lang === 'el' ? 'el_GR' : 'en_US';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: site.name,
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  description: ui[lang].meta.description,
+  url: site.url,
+  sameAs: site.socials.map((s) => s.href),
+};
+---
+<!doctype html>
+<html lang={ui[lang].htmlLang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#0f8b7d" />
+
+    {!noindex && <link rel="alternate" hreflang="el" href={new URL('/', site.url).href} />}
+    {!noindex && <link rel="alternate" hreflang="en" href={new URL('/en/', site.url).href} />}
+    {!noindex && <link rel="alternate" hreflang="x-default" href={new URL('/', site.url).href} />}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={ogLocale} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <script is:inline>
+      (function () {
+        try {
+          var s = localStorage.getItem('theme');
+          var d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.dataset.theme = s || (d ? 'dark' : 'light');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <Header lang={lang} />
+    <main>
+      <slot />
+    </main>
+    <Footer lang={lang} />
+
+    <script>
+      document.addEventListener('click', (e) => {
+        const btn = (e.target as HTMLElement).closest('#theme-toggle');
+        if (!btn) return;
+        const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = next;
+        try {
+          localStorage.setItem('theme', next);
+        } catch {}
+      });
+    </script>
+  </body>
+</html>

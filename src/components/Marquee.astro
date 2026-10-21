@@ -1,0 +1,95 @@
+---
+import { ui, type Lang } from '../i18n/ui';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang];
+const items = t.marquee.items;
+---
+
+<div class="marquee-wrap" aria-label={t.marquee.label} role="region">
+  <div class="marquee-track">
+    <ul class="marquee-list" role="list">
+      {items.map(item => <li role="listitem">{item}</li>)}
+    </ul>
+    <ul class="marquee-list" aria-hidden="true" role="list">
+      {items.map(item => <li role="listitem">{item}</li>)}
+    </ul>
+  </div>
+</div>
+
+<style>
+  .marquee-wrap {
+    position: relative;
+    overflow: hidden;
+    padding: 13px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-alt);
+  }
+  .marquee-wrap::before,
+  .marquee-wrap::after {
+    content: '';
+    position: absolute; top: 0; bottom: 0;
+    width: 72px; z-index: 2; pointer-events: none;
+  }
+  .marquee-wrap::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-alt), transparent);
+  }
+  .marquee-wrap::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-alt), transparent);
+  }
+
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 26s linear infinite;
+  }
+  .marquee-wrap:hover .marquee-track,
+  .marquee-wrap:focus-within .marquee-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 16px;
+      gap: 6px;
+    }
+    .marquee-list:last-child { display: none; }
+    .marquee-list li {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 4px 14px;
+      white-space: normal;
+    }
+    .marquee-list li::after { display: none; }
+  }
+
+  .marquee-list {
+    display: flex; align-items: center;
+    list-style: none; padding: 0; margin: 0;
+    white-space: nowrap;
+  }
+  .marquee-list li {
+    padding: 0 22px;
+    font-size: 0.875rem; font-weight: 600;
+    color: var(--muted);
+    position: relative;
+  }
+  .marquee-list li::after {
+    content: '·';
+    position: absolute; right: -1px; top: 50%; transform: translateY(-50%);
+    color: var(--border); font-size: 1.2rem; line-height: 1;
+  }
+</style>

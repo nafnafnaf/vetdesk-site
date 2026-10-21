@@ -1,0 +1,25 @@
+---
+import { ui, type Lang } from '../i18n/ui';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = ui[lang].steps;
+---
+<section id="how" class="section section-alt">
+  <div class="container">
+    <div class="section-head center">
+      <h2>{t.title}</h2>
+      <p class="lead" style="margin-inline:auto;">{t.subtitle}</p>
+    </div>
+    <div class="grid grid-3">
+      {
+        t.items.map((s, i) => (
+          <div class="card">
+            <div class="step-num">{i + 1}</div>
+            <h3>{s.title}</h3>
+            <p>{s.text}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
