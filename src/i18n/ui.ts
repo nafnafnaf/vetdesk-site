@@ -72,6 +72,15 @@ const el = {
         text: 'Υπενθυμίσεις εμβολίων και επανεξετάσεων προς τον ιδιοκτήτη, ώστε να γεμίζει το πρόγραμμα χωρίς τηλέφωνα.',
       },
       {
+        id: 'lab-scanning',
+        title: 'Αυτόματη ανάγνωση εξετάσεων',
+        text: 'Εισαγωγή αποτελεσμάτων εξετάσεων με κάμερα ή drag & drop, χωρίς χειροκίνητη καταχώρηση τιμών.',
+        bullets: [
+          'Αυτόματη ανάγνωση και εισαγωγή αποτελεσμάτων εξετάσεων μέσω του κινητού του κτηνίατρου ή drag & drop από εκτυπώσεις — όλες οι παράμετροι και οι τιμές τους καταχωρούνται σωστά.',
+          'Αυτόματη αναγνώριση διαγνωστικών κιτ με αναφορά του βαθμού εγκυρότητας.',
+        ],
+      },
+      {
         id: 'invoicing',
         title: 'Τιμολόγηση χωρίς δεύτερη σκέψη',
         text: 'Έκδοση παραστατικών προσαρμοσμένων στην ελληνική αγορά, με ιστορικό χρεώσεων ανά πελάτη.',
@@ -212,6 +221,15 @@ const en: typeof el = {
         id: 'reminders',
         title: 'Reminders that get sent',
         text: 'Vaccine and follow-up reminders go out to owners, so the schedule fills itself without phone calls.',
+      },
+      {
+        id: 'lab-scanning',
+        title: 'Lab results without manual entry',
+        text: "Import exam results from the vet's mobile camera or drag & drop — no manual transcription of values.",
+        bullets: [
+          "Automatic reading and import of lab results via the vet's mobile or by drag & drop from printouts — all parameters and values entered correctly.",
+          'Automatic recognition of diagnostic kits with a validity score report.',
+        ],
       },
       {
         id: 'invoicing',
