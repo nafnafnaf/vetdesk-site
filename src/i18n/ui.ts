@@ -60,6 +60,11 @@ const el = {
         id: 'records',
         title: 'Πλήρες ιστορικό ασθενούς',
         text: 'Εμβολιασμοί, εξετάσεις, φάρμακα και σημειώσεις σε ένα προφίλ ανά ζώο και ιδιοκτήτη.',
+        bullets: [
+          'Δημιουργία πλήρους ιστορικού για κάθε επίσκεψη / νοσηλεία.',
+          'Παρακολούθηση χρεώσεων κατά τη νοσηλεία στο κτηνιατρείο.',
+          'Διαφορικές διαγνώσεις βάσει του ιστορικού, είτε ανά επίσκεψη είτε συνολικά, με αυτόματη συμπερίληψη όλων των αρχείων εξετάσεων του ζώου με τη χρήση ΑΙ.',
+        ],
       },
       {
         id: 'reminders',
@@ -197,6 +202,11 @@ const en: typeof el = {
         id: 'records',
         title: 'Complete patient records',
         text: 'Vaccinations, tests, medication and notes in one profile per animal and owner.',
+        bullets: [
+          'Full clinical history for every visit and hospitalisation.',
+          'Charge tracking during in-clinic stays.',
+          "AI-assisted differential diagnoses based on the patient's history — per visit or across all visits — with automatic inclusion of all the animal's lab and imaging files.",
+        ],
       },
       {
         id: 'reminders',
