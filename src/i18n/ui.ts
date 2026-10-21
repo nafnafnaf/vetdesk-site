@@ -50,6 +50,11 @@ const el = {
         id: 'appointments',
         title: 'Ραντεβού χωρίς κενά',
         text: 'Ημερολόγιο ανά κτηνίατρο και χώρο, γρήγορη κράτηση και καθαρή εικόνα του φόρτου της ημέρας.',
+        bullets: [
+          'Έλεγχος και επίλυση διπλών καταχωρίσεων και συγκρούσεων ραντεβού.',
+          'Ειδοποιήσεις SMS 7/3/1 μέρες πριν την επίσκεψη προς τους κηδεμόνες· υπενθυμίσεις εμβολίων και αντιπαρασιτικών αγωγών σε επιλεγμένα διαστήματα, ώστε να μην παραβλέπονται επαναλαμβανόμενες και προληπτικές θεραπείες.',
+          'Ταυτόχρονη εσωτερική ειδοποίηση της ιατρικής ομάδας για εκκρεμότητες: αποτελέσματα εξωτερικών εργαστηρίων, παραλαβές φαρμάκων και προϊόντων από προμηθευτές.',
+        ],
       },
       {
         id: 'records',
@@ -179,9 +184,14 @@ const en: typeof el = {
     subtitle: 'Less time on admin, more time for the animals.',
     items: [
       {
-        id: 'appointments',
-        title: 'Appointments without gaps',
-        text: 'A calendar per vet and room, quick booking and a clear view of the day’s load.',
+        id: ‘appointments’,
+        title: ‘Appointments without gaps’,
+        text: ‘A calendar per vet and room, quick booking and a clear view of the day’s load.’,
+        bullets: [
+          ‘Detection and resolution of double bookings and scheduling conflicts.’,
+          ‘SMS reminders at 7/3/1 days before each visit; vaccine and antiparasitic treatment reminders at configured intervals so recurring and preventive care is never missed.’,
+          ‘Internal team notifications for pending items: external lab results, incoming medication and product deliveries from suppliers.’,
+        ],
       },
       {
         id: 'records',
