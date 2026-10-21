@@ -3,3 +3,4 @@ dist
 .astro
 media/videos/*
 !media/videos/.gitkeep
+.env
