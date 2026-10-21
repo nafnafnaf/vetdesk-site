@@ -186,7 +186,7 @@ const en: typeof el = {
       {
         id: 'appointments',
         title: 'Appointments without gaps',
-        text: 'A calendar per vet and room, quick booking and a clear view of the day's load.',
+        text: "A calendar per vet and room, quick booking and a clear view of the day's load.",
         bullets: [
           'Detection and resolution of double bookings and scheduling conflicts.',
           'SMS reminders at 7/3/1 days before each visit; vaccine and antiparasitic treatment reminders at configured intervals so recurring and preventive care is never missed.',
@@ -214,7 +214,7 @@ const en: typeof el = {
     title: 'Get started in three steps',
     subtitle: 'Switching systems does not have to be a headache.',
     items: [
-      { title: 'Sign up', text: 'We set up your clinic's environment.' },
+      { title: 'Sign up', text: "We set up your clinic's environment." },
       { title: 'Move your data', text: 'We import clients and patients from your current records.' },
       { title: 'Go live', text: 'We train your team and you start the next day.' },
     ],
@@ -225,7 +225,7 @@ const en: typeof el = {
     items: [
       { title: 'Greek interface', text: 'Fully in Greek, using the terms your clinic uses.' },
       { title: 'Tax requirements', text: 'Designed with AADE and myDATA in mind.' },
-      { title: 'GDPR and security', text: 'Each clinic's data stays separated and protected.' },
+      { title: 'GDPR and security', text: "Each clinic's data stays separated and protected." },
       { title: 'EU hosting', text: 'Your data stays inside the European Union.' },
       { title: 'Support in Greek', text: 'You talk directly to the person who builds the product.' },
     ],
@@ -246,7 +246,7 @@ const en: typeof el = {
       },
       {
         q: 'Is my data safe?',
-        a: 'Each clinic's data is kept separate from all others and backups are created regularly.',
+        a: "Each clinic's data is kept separate from all others and backups are created regularly.",
       },
       { q: 'Do I need to install anything?', a: 'No. It runs in the browser, on a computer or tablet.' },
       { q: 'Is training included?', a: 'Yes. We start with a short training session for your team.' },
