@@ -123,7 +123,7 @@ const el = {
     title: 'Φτιαγμένο για να διευκολύνει την καθημερινότητα του κτηνίατρου',
     subtitle: '',
     items: [
-      { title: 'Ελληνικό περιβάλλον', text: 'Πλήρως στα ελληνικά, με όρους που χρησιμοποιείτε στην κλινική.' },
+      { title: 'Προσαρμογή στη ροή εργασίας σας', text: 'Δυνατότητα παραμετροποίησης ή δημιουργίας νέων λειτουργιών που να ταιριάζει στη ροή της εργασίας σας.' },
       { title: 'Φορολογικές απαιτήσεις', text: 'Σχεδιασμένο με γνώμονα την ΑΑΔΕ και το myDATA.' },
       { title: 'GDPR και ασφάλεια', text: 'Τα δεδομένα κάθε κλινικής παραμένουν διαχωρισμένα και προστατευμένα.' },
       { title: 'Φιλοξενία στην ΕΕ', text: 'Τα δεδομένα σας μένουν εντός Ευρωπαϊκής Ένωσης.' },
@@ -297,7 +297,7 @@ const en: typeof el = {
     title: "Built to make the vet's daily work easier",
     subtitle: '',
     items: [
-      { title: 'Greek interface', text: 'Fully in Greek, using the terms your clinic uses.' },
+      { title: 'Customised to your workflow', text: 'Ability to configure or create new features that fit the way your clinic works.' },
       { title: 'Tax requirements', text: 'Designed with AADE and myDATA in mind.' },
       { title: 'GDPR and security', text: "Each clinic's data stays separated and protected." },
       { title: 'EU hosting', text: 'Your data stays inside the European Union.' },
