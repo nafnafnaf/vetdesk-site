@@ -53,6 +53,7 @@ const el = {
         bullets: [
           'Έλεγχος και επίλυση διπλών καταχωρίσεων και συγκρούσεων ραντεβού του κτηνίατρου ή της αίθουσας ή του τμήματος του κτηνιατρείου.',
           'Ειδοποιήσεις SMS 7/3/1 μέρες πριν την επίσκεψη προς τους κηδεμόνες· υπενθυμίσεις εμβολίων και αντιπαρασιτικών αγωγών σε προεπιλεγμένα διαστήματα, ώστε να μην παραβλέπονται επαναλαμβανόμενες και προληπτικές θεραπείες.',
+          'Επιλογή αυτόματης δημιουργίας ραντεβού και υπενθυμίσεων για αναμνηστικές δόσεις ή προληπτικές θεραπείες σε προεπιλεγμένα χρονικά διαστήματα.',
           'Ταυτόχρονη εσωτερική ειδοποίηση της ιατρικής ομάδας για εκκρεμότητες: αποτελέσματα εξωτερικών εργαστηρίων, παραλαβές φαρμάκων και προϊόντων από προμηθευτές.',
         ],
       },
@@ -99,8 +100,8 @@ const el = {
       },
       {
         id: 'invoicing',
-        title: 'Τιμολόγηση χωρίς δεύτερη σκέψη',
-        text: 'Έκδοση παραστατικών προσαρμοσμένων στην ελληνική αγορά, με ιστορικό χρεώσεων ανά πελάτη.',
+        title: 'Τιμολόγηση χωρίς κρυφές χρεώσεις',
+        text: 'Έκδοση παραστατικών προσαρμοσμένων σύμφωνα με τα πρότυπα του MYDATA, με ιστορικό χρεώσεων ανά πελάτη.',
         bullets: [
           'Τιμολόγηση μέσω πιστοποιημένου παρόχου.',
           'Άμεση αποστολή παραστατικών στην ΑΑΔΕ — υποστήριξη B2C, B2B, B2G και παραστατικών αντιλογιστικής.',
@@ -119,8 +120,8 @@ const el = {
     ],
   },
   greece: {
-    title: 'Φτιαγμένο για την ελληνική αγορά',
-    subtitle: 'Όχι ένα ξένο εργαλείο με μετάφραση.',
+    title: 'Φτιαγμένο για να διευκολύνει την καθημερινότητα του κτηνίατρου',
+    subtitle: '',
     items: [
       { title: 'Ελληνικό περιβάλλον', text: 'Πλήρως στα ελληνικά, με όρους που χρησιμοποιείτε στην κλινική.' },
       { title: 'Φορολογικές απαιτήσεις', text: 'Σχεδιασμένο με γνώμονα την ΑΑΔΕ και το myDATA.' },
@@ -226,6 +227,7 @@ const en: typeof el = {
         bullets: [
           'Detection and resolution of double bookings and scheduling conflicts per vet, room or clinic department.',
           'SMS reminders at 7/3/1 days before each visit; vaccine and antiparasitic treatment reminders at configured intervals so recurring and preventive care is never missed.',
+          'Option to automatically create appointments and reminders for booster doses or preventive treatments at preset intervals.',
           'Internal team notifications for pending items: external lab results, incoming medication and product deliveries from suppliers.',
         ],
       },
@@ -272,8 +274,8 @@ const en: typeof el = {
       },
       {
         id: 'invoicing',
-        title: 'Invoicing without second thoughts',
-        text: 'Documents adapted to the Greek market, with billing history per client.',
+        title: 'Invoicing without hidden fees',
+        text: 'Documents issued in compliance with MYDATA standards, with billing history per client.',
         bullets: [
           'Invoicing through a certified provider.',
           'Instant submission of documents to AADE (Greek tax authority) — B2C, B2B, B2G and credit note documents supported.',
@@ -292,8 +294,8 @@ const en: typeof el = {
     ],
   },
   greece: {
-    title: 'Built for the Greek market',
-    subtitle: 'Not a foreign tool with a translation on top.',
+    title: "Built to make the vet's daily work easier",
+    subtitle: '',
     items: [
       { title: 'Greek interface', text: 'Fully in Greek, using the terms your clinic uses.' },
       { title: 'Tax requirements', text: 'Designed with AADE and myDATA in mind.' },
