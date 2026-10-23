@@ -90,6 +90,11 @@ const el = {
         id: 'invoicing',
         title: 'Τιμολόγηση χωρίς δεύτερη σκέψη',
         text: 'Έκδοση παραστατικών προσαρμοσμένων στην ελληνική αγορά, με ιστορικό χρεώσεων ανά πελάτη.',
+        bullets: [
+          'Τιμολόγηση μέσω πιστοποιημένου παρόχου.',
+          'Άμεση αποστολή παραστατικών στην ΑΑΔΕ — υποστήριξη B2C, B2B, B2G και παραστατικών αντιλογιστικής.',
+          'Αναφορές εσόδων/εξόδων ανά μήνα και έτος.',
+        ],
       },
     ],
   },
@@ -247,6 +252,11 @@ const en: typeof el = {
         id: 'invoicing',
         title: 'Invoicing without second thoughts',
         text: 'Documents adapted to the Greek market, with billing history per client.',
+        bullets: [
+          'Invoicing through a certified provider.',
+          'Instant submission of documents to AADE (Greek tax authority) — B2C, B2B, B2G and credit note documents supported.',
+          'Income/expense reports per month and year.',
+        ],
       },
     ],
   },
