@@ -25,15 +25,56 @@ const t = ui[lang].features;
             )}
           </div>
           <div class="feature-media">
-            <video muted loop playsinline preload="none" data-lazy poster="/images/poster.svg" aria-label={f.title}>
-              <source src={`/videos/${f.id}.mp4`} type="video/mp4" />
-            </video>
+            {f.id === 'appointments' ? (
+              <div class="feat-gallery" data-feat-gallery>
+                <div class="feat-gallery-track" data-feat-track>
+                  <img src="/screenshots/slide-03-dashboard.png" alt="Dashboard" loading="lazy" />
+                  <img src="/screenshots/slide-01-reschedule.png" alt="Μεταφορά ραντεβού" loading="lazy" />
+                  <img src="/screenshots/slide-02-reschedule-confirm.png" alt="Επιβεβαίωση ραντεβού" loading="lazy" />
+                </div>
+                <div class="feat-gallery-dots" aria-hidden="true">
+                  <button class="feat-dot active" data-feat-dot="0"></button>
+                  <button class="feat-dot" data-feat-dot="1"></button>
+                  <button class="feat-dot" data-feat-dot="2"></button>
+                </div>
+              </div>
+            ) : (
+              <video muted loop playsinline preload="none" data-lazy poster="/images/poster.svg" aria-label={f.title}>
+                <source src={`/videos/${f.id}.mp4`} type="video/mp4" />
+              </video>
+            )}
           </div>
         </div>
       ))
     }
   </div>
 </section>
+
+<style>
+  .feat-gallery {
+    position: relative;
+    width: 100%; border-radius: 12px; overflow: hidden;
+    aspect-ratio: 16 / 10;
+    background: var(--bg-alt);
+    box-shadow: 0 4px 24px color-mix(in srgb, var(--text) 10%, transparent);
+  }
+  .feat-gallery-track {
+    display: flex; height: 100%;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .feat-gallery-track img {
+    flex: 0 0 100%; height: 100%; object-fit: cover; object-position: top left;
+  }
+  .feat-gallery-dots {
+    position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 6px;
+  }
+  .feat-dot {
+    width: 7px; height: 7px; border-radius: 50%; border: none; cursor: pointer; padding: 0;
+    background: rgba(255,255,255,0.5); transition: background 0.2s, transform 0.2s;
+  }
+  .feat-dot.active { background: #fff; transform: scale(1.4); }
+</style>
 
 <script>
   const vids = document.querySelectorAll<HTMLVideoElement>('video[data-lazy]');
@@ -54,4 +95,25 @@ const t = ui[lang].features;
     );
     vids.forEach((v) => io.observe(v));
   }
+
+  // Feature gallery (screenshots)
+  document.querySelectorAll<HTMLElement>('[data-feat-gallery]').forEach((gallery) => {
+    const track = gallery.querySelector<HTMLElement>('[data-feat-track]')!;
+    const dots = [...gallery.querySelectorAll<HTMLButtonElement>('[data-feat-dot]')];
+    const total = dots.length;
+    let idx = 0;
+    let timer: ReturnType<typeof setInterval>;
+
+    function go(n: number) {
+      idx = ((n % total) + total) % total;
+      track.style.transform = `translateX(-${idx * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    }
+
+    dots.forEach((d) => d.addEventListener('click', () => { go(Number(d.dataset.featDot)); clearInterval(timer); timer = setInterval(() => go(idx + 1), 4000); }));
+
+    if (!reduce) timer = setInterval(() => go(idx + 1), 4000);
+    gallery.addEventListener('mouseenter', () => clearInterval(timer));
+    gallery.addEventListener('mouseleave', () => { if (!reduce) timer = setInterval(() => go(idx + 1), 4000); });
+  });
 </script>
