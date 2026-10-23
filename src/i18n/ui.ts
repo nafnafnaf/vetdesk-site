@@ -58,12 +58,14 @@ const el = {
       },
       {
         id: 'records',
-        title: 'Πλήρες ιστορικό ασθενούς',
-        text: 'Εμβολιασμοί, εξετάσεις, φάρμακα και σημειώσεις σε ένα προφίλ ανά ζώο και ιδιοκτήτη.',
+        title: 'Πλήρες ιστορικό ασθενούς & Διαφορική Διάγνωση',
+        text: 'Πλήρης φάκελος με όλο το ιστορικό εξετάσεων, εμβολιασμών, παρατηρήσεων και νοσηλειών, με ανάλυση όλων των δεδομένων ανά επίσκεψη ή συνολικά για έκδοση διαφορικής διάγνωσης.',
         bullets: [
           'Δημιουργία πλήρους ιστορικού για κάθε επίσκεψη / νοσηλεία.',
           'Παρακολούθηση χρεώσεων κατά τη νοσηλεία στο κτηνιατρείο.',
           'Διαφορικές διαγνώσεις βάσει του ιστορικού, είτε ανά επίσκεψη είτε συνολικά, με αυτόματη συμπερίληψη όλων των αρχείων εξετάσεων του ζώου με τη χρήση ΑΙ.',
+          'Ακτινογραφίες, υπέρηχοι, εκτυπώσεις εξετάσεων και έγγραφα (DICOM, JPG, PDF) συνδεδεμένα απευθείας με την αντίστοιχη επίσκεψη.',
+          'Ιστορικό μετρήσεων βάρους με γράφημα και ένδειξη αύξησης/μείωσης, ώστε η εξέλιξη του ζώου να είναι ορατή με μια ματιά.',
         ],
       },
       {
@@ -209,12 +211,14 @@ const en: typeof el = {
       },
       {
         id: 'records',
-        title: 'Complete patient records',
-        text: 'Vaccinations, tests, medication and notes in one profile per animal and owner.',
+        title: 'Complete patient records & Differential Diagnosis',
+        text: 'Complete file with the full history of tests, vaccinations, observations and hospitalisations, with analysis of all data per visit or across the full history for differential diagnosis.',
         bullets: [
           'Full clinical history for every visit and hospitalisation.',
           'Charge tracking during in-clinic stays.',
           "AI-assisted differential diagnoses based on the patient's history — per visit or across all visits — with automatic inclusion of all the animal's lab and imaging files.",
+          'X-rays, ultrasounds, lab printouts and documents (DICOM, JPG, PDF) linked directly to the corresponding visit.',
+          "Weight measurement history with a trend chart and increase/decrease indicator, so the animal's progress is visible at a glance.",
         ],
       },
       {
