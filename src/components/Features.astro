@@ -25,12 +25,19 @@ const t = ui[lang].features;
             )}
           </div>
           <div class="feature-media">
-            {f.id === 'appointments' ? (
+            {(f.id === 'appointments' || f.id === 'records') ? (
               <div class="feat-gallery" data-feat-gallery>
                 <div class="feat-gallery-track" data-feat-track>
-                  <img src="/screenshots/slide-03-dashboard.png" alt="Dashboard" loading="lazy" />
-                  <img src="/screenshots/slide-01-reschedule.png" alt="Μεταφορά ραντεβού" loading="lazy" />
-                  <img src="/screenshots/slide-02-reschedule-confirm.png" alt="Επιβεβαίωση ραντεβού" loading="lazy" />
+                  {f.id === 'appointments' && <>
+                    <img src="/screenshots/slide-03-dashboard.png" alt="Dashboard" loading="lazy" />
+                    <img src="/screenshots/slide-01-reschedule.png" alt="Μεταφορά ραντεβού" loading="lazy" />
+                    <img src="/screenshots/slide-02-reschedule-confirm.png" alt="Επιβεβαίωση ραντεβού" loading="lazy" />
+                  </>}
+                  {f.id === 'records' && <>
+                    <img src="/screenshots/records-01-lab-results.png" alt="Αποτελέσματα εξέτασης" loading="lazy" />
+                    <img src="/screenshots/records-02-new-entry.png" alt="Νέα κλινική εγγραφή" loading="lazy" />
+                    <img src="/screenshots/records-03-ai-assistant.png" alt="Ψηφιακός Βοηθός" loading="lazy" />
+                  </>}
                 </div>
                 <div class="feat-gallery-dots" aria-hidden="true">
                   <button class="feat-dot active" data-feat-dot="0"></button>
