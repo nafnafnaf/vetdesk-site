@@ -40,7 +40,7 @@ const el = {
   },
   marquee: {
     label: 'Λειτουργίες VetDesk',
-    items: ['Ραντεβού', 'Ιστορικό ασθενών', 'Υπενθυμίσεις εμβολίων', 'Εργαστηριακά', 'Αρχεία', 'SMS ειδοποιήσεις', 'Χρεώσεις', 'Ασφαλής αποθήκευση'],
+    items: ['Ραντεβού', 'Ιστορικό ασθενών', 'Διαφορική Διάγνωση', 'Αυτόματες Υπενθυμίσεις', 'Υπενθυμίσεις εμβολίων', 'Εργαστηριακά', 'Αρχεία', 'SMS ειδοποιήσεις', 'Email ειδοποιήσεις', 'Αποθήκη', 'Έκδοση Παραστατικών', 'Ασφαλής αποθήκευση'],
   },
   features: {
     title: 'Όλα όσα χρειάζεται η κλινική σας',
@@ -214,7 +214,7 @@ const en: typeof el = {
   },
   marquee: {
     label: 'VetDesk features',
-    items: ['Appointments', 'Patient records', 'Vaccine reminders', 'Lab results', 'Files', 'SMS notifications', 'Invoicing', 'Secure storage'],
+    items: ['Appointments', 'Patient records', 'Differential Diagnosis', 'Automated Reminders', 'Vaccine reminders', 'Lab results', 'Files', 'SMS notifications', 'Email notifications', 'Warehouse', 'Invoice generation', 'Secure storage'],
   },
   features: {
     title: 'Everything your clinic needs',
