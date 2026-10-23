@@ -72,6 +72,10 @@ const el = {
         id: 'reminders',
         title: 'Υπενθυμίσεις που δεν ξεχνιούνται',
         text: 'Υπενθυμίσεις εμβολίων και επανεξετάσεων προς τον ιδιοκτήτη, ώστε να γεμίζει το πρόγραμμα χωρίς τηλέφωνα.',
+        bullets: [
+          'Αυτόματη αποστολή SMS / email σε προεπιλεγμένα διαστήματα για νέα ραντεβού, υπενθυμίσεις αγωγών, αντιπαρασιτικών και εμβολίων.',
+          'Εσωτερικές ειδοποιήσεις του συστήματος προς τους κτηνιάτρους και το προσωπικό του κτηνιατρείου.',
+        ],
       },
       {
         id: 'lab-scanning',
@@ -225,6 +229,10 @@ const en: typeof el = {
         id: 'reminders',
         title: 'Reminders that get sent',
         text: 'Vaccine and follow-up reminders go out to owners, so the schedule fills itself without phone calls.',
+        bullets: [
+          'Automatic SMS / email at preset intervals for new appointments, treatment reminders, antiparasitic treatments and vaccinations.',
+          'Internal system notifications to vets and clinic staff.',
+        ],
       },
       {
         id: 'lab-scanning',
