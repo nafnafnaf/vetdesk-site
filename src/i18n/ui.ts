@@ -127,7 +127,7 @@ const el = {
       { title: 'Φορολογικές απαιτήσεις', text: 'Σχεδιασμένο με γνώμονα την ΑΑΔΕ και το myDATA.' },
       { title: 'GDPR και ασφάλεια', text: 'Τα δεδομένα κάθε κλινικής παραμένουν διαχωρισμένα και προστατευμένα.' },
       { title: 'Φιλοξενία στην ΕΕ', text: 'Τα δεδομένα σας μένουν εντός Ευρωπαϊκής Ένωσης.' },
-      { title: 'Υποστήριξη στα ελληνικά', text: 'Μιλάτε απευθείας με τον άνθρωπο που φτιάχνει το προϊόν.' },
+      { title: 'Άμεση τηλεφωνική υποστήριξη', text: 'Μιλάτε απευθείας με τον άνθρωπο που φτιάχνει το προϊόν.' },
     ],
   },
   pricing: {
@@ -301,7 +301,7 @@ const en: typeof el = {
       { title: 'Tax requirements', text: 'Designed with AADE and myDATA in mind.' },
       { title: 'GDPR and security', text: "Each clinic's data stays separated and protected." },
       { title: 'EU hosting', text: 'Your data stays inside the European Union.' },
-      { title: 'Support in Greek', text: 'You talk directly to the person who builds the product.' },
+      { title: 'Direct phone support', text: 'You talk directly to the person who builds the product.' },
     ],
   },
   pricing: {
