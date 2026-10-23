@@ -52,54 +52,15 @@ const N = slides.length;
                   <div class="mock-label">{slideTitle}</div>
 
                   {i === 0 && (
-                    <div class="mock-content">
-                      <div class="mock-metrics">
-                        <div class="mock-metric"><b>12</b><small>Ραντεβού</small></div>
-                        <div class="mock-metric"><b>3</b><small>Αίθουσα</small></div>
-                        <div class="mock-metric"><b>5</b><small>Εκκρεμή</small></div>
-                        <div class="mock-metric"><b>148</b><small>Ασθενείς</small></div>
-                      </div>
-                      <div class="mock-list">
-                        <div class="mock-appt"><span class="dot dot-done"></span><span>Max · Σκύλος<small>09:00 · Τακτικός</small></span></div>
-                        <div class="mock-appt"><span class="dot dot-inroom"></span><span>Luna · Γάτα<small>10:30 · Εμβολιασμός</small></span></div>
-                        <div class="mock-appt"><span class="dot dot-waiting"></span><span>Bella · Κουνέλι<small>11:00 · Εξέταση</small></span></div>
-                        <div class="mock-appt"><span class="dot dot-urgent"></span><span>Rocky · Σκύλος<small>12:00 · Επείγον</small></span></div>
-                      </div>
-                    </div>
+                    <img src="/screenshots/slide-01-reschedule.png" alt={slides[0]} class="slide-img" />
                   )}
 
                   {i === 1 && (
-                    <div class="mock-content">
-                      <div class="mock-cal-head">
-                        {['ΔΕ','ΤΡ','ΤΕ','ΠΕ','ΠΑ','ΣΑ','ΚΥ'].map(d => <span>{d}</span>)}
-                      </div>
-                      <div class="mock-cal-grid">
-                        {Array.from({length: 35}, (_, j) => (
-                          <div class={['cal-day', [2,7,9,14,20,27].includes(j) ? 'has-appt' : '', j === 20 ? 'today' : ''].filter(Boolean).join(' ')}>
-                            {j < 31 ? j + 1 : ''}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                    <img src="/screenshots/slide-02-reschedule-confirm.png" alt={slides[1]} class="slide-img" />
                   )}
 
                   {i === 2 && (
-                    <div class="mock-content">
-                      <div class="mock-pat-header">
-                        <div class="mock-avatar">🐕</div>
-                        <div>
-                          <b>Max</b>
-                          <small>Labrador · 4 ετών · Αρσενικό</small>
-                          <small>Ιδιοκτ: Γεωργίου Νίκος · 6941234567</small>
-                        </div>
-                      </div>
-                      <div class="mock-pat-rows">
-                        <div class="mock-pat-row"><span class="mock-tag vax">Εμβολιασμός</span>Πολλαπλό — 15/03/2026</div>
-                        <div class="mock-pat-row"><span class="mock-tag neg">Λεϊσμανίαση</span>Αρνητικός</div>
-                        <div class="mock-pat-row"><span class="mock-tag wt">Βάρος</span>28,5 kg ▲</div>
-                        <div class="mock-pat-row"><span class="mock-tag mic">Μικροτσίπ</span>688012345678901</div>
-                      </div>
-                    </div>
+                    <img src="/screenshots/slide-03-dashboard.png" alt={slides[2]} class="slide-img" />
                   )}
 
                   {i === 3 && (
@@ -280,6 +241,8 @@ const N = slides.length;
   }
   .car-dot[aria-selected="true"] { background: var(--primary); transform: scale(1.4); }
   .car-dot:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+  .slide-img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
   /* Slide mock — shared */
   .slide-mock {
