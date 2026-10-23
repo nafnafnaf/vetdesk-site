@@ -51,8 +51,8 @@ const el = {
         title: 'Ραντεβού χωρίς κενά',
         text: 'Ημερολόγιο ανά κτηνίατρο και χώρο, γρήγορη κράτηση και καθαρή εικόνα του φόρτου της ημέρας.',
         bullets: [
-          'Έλεγχος και επίλυση διπλών καταχωρίσεων και συγκρούσεων ραντεβού.',
-          'Ειδοποιήσεις SMS 7/3/1 μέρες πριν την επίσκεψη προς τους κηδεμόνες· υπενθυμίσεις εμβολίων και αντιπαρασιτικών αγωγών σε επιλεγμένα διαστήματα, ώστε να μην παραβλέπονται επαναλαμβανόμενες και προληπτικές θεραπείες.',
+          'Έλεγχος και επίλυση διπλών καταχωρίσεων και συγκρούσεων ραντεβού του κτηνίατρου ή της αίθουσας ή του τμήματος του κτηνιατρείου.',
+          'Ειδοποιήσεις SMS 7/3/1 μέρες πριν την επίσκεψη προς τους κηδεμόνες· υπενθυμίσεις εμβολίων και αντιπαρασιτικών αγωγών σε προεπιλεγμένα διαστήματα, ώστε να μην παραβλέπονται επαναλαμβανόμενες και προληπτικές θεραπείες.',
           'Ταυτόχρονη εσωτερική ειδοποίηση της ιατρικής ομάδας για εκκρεμότητες: αποτελέσματα εξωτερικών εργαστηρίων, παραλαβές φαρμάκων και προϊόντων από προμηθευτές.',
         ],
       },
@@ -75,6 +75,7 @@ const el = {
         bullets: [
           'Αυτόματη αποστολή SMS / email σε προεπιλεγμένα διαστήματα για νέα ραντεβού, υπενθυμίσεις αγωγών, αντιπαρασιτικών και εμβολίων.',
           'Εσωτερικές ειδοποιήσεις του συστήματος προς τους κτηνιάτρους και το προσωπικό του κτηνιατρείου.',
+          'Δημιουργία SMS / email καμπάνιας για μαζική αποστολή ειδοποιήσεων σε επιλεγμένους ιδιοκτήτες.',
         ],
       },
       {
@@ -223,7 +224,7 @@ const en: typeof el = {
         title: 'Appointments without gaps',
         text: "A calendar per vet and room, quick booking and a clear view of the day's load.",
         bullets: [
-          'Detection and resolution of double bookings and scheduling conflicts.',
+          'Detection and resolution of double bookings and scheduling conflicts per vet, room or clinic department.',
           'SMS reminders at 7/3/1 days before each visit; vaccine and antiparasitic treatment reminders at configured intervals so recurring and preventive care is never missed.',
           'Internal team notifications for pending items: external lab results, incoming medication and product deliveries from suppliers.',
         ],
@@ -247,6 +248,7 @@ const en: typeof el = {
         bullets: [
           'Automatic SMS / email at preset intervals for new appointments, treatment reminders, antiparasitic treatments and vaccinations.',
           'Internal system notifications to vets and clinic staff.',
+          'SMS / email campaign creation for bulk notifications to selected owners.',
         ],
       },
       {
