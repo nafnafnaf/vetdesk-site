@@ -87,6 +87,16 @@ const el = {
         ],
       },
       {
+        id: 'warehouse',
+        title: 'Αποθήκη & Διαχείριση Αναλωσίμων',
+        text: 'Παρακολούθηση αποθέματος φαρμάκων και ειδών σε πραγματικό χρόνο, με αυτόματες παραγγελίες και άμεση σύνδεση με τιμολόγηση.',
+        bullets: [
+          'Πλήρης διαχείριση αποθήκης για είδη και φάρμακα — αυτόματη παρακολούθηση ποσότητας και αυτόματα email παραγγελιών προς τον προμηθευτή.',
+          'Πώληση φαρμάκων και ειδών με άμεση αφαίρεση από το στοκ.',
+          'Κατανάλωση φαρμάκων και αναλώσιμων για ζώα σε νοσηλεία με ταυτόχρονη αφαίρεση από το απόθεμα και τιμολόγηση στα έξοδα νοσηλείας.',
+        ],
+      },
+      {
         id: 'invoicing',
         title: 'Τιμολόγηση χωρίς δεύτερη σκέψη',
         text: 'Έκδοση παραστατικών προσαρμοσμένων στην ελληνική αγορά, με ιστορικό χρεώσεων ανά πελάτη.',
@@ -246,6 +256,16 @@ const en: typeof el = {
         bullets: [
           "Automatic reading and import of lab results via the vet's mobile or by drag & drop from printouts — all parameters and values entered correctly.",
           'Automatic recognition of diagnostic kits with a validity score report.',
+        ],
+      },
+      {
+        id: 'warehouse',
+        title: 'Inventory & Consumables Management',
+        text: 'Real-time tracking of medication and product stock, with automatic reorders and direct connection to billing.',
+        bullets: [
+          'Full inventory management for products and medications — automatic stock-level monitoring and automatic order emails to the supplier.',
+          'Sale of medications and products with immediate deduction from stock.',
+          'Consumption of medications and consumables for hospitalised animals with simultaneous stock deduction and billing to hospitalisation costs.',
         ],
       },
       {
