@@ -7,7 +7,7 @@ export const site = {
   viber: 'viber://chat?number=%2B306938025100',
   whatsapp: 'https://wa.me/306900000000', // TODO
   // Leave empty to fall back to a mailto: link. Otherwise POST target (Formspree, own endpoint, etc.)
-  formEndpoint: '',
+  formEndpoint: 'https://formspree.io/f/xaeeygyg',
   socials: [
     { id: 'facebook', label: 'Facebook', href: 'https://www.facebook.com/vetdesk' }, // TODO
     { id: 'instagram', label: 'Instagram', href: 'https://www.instagram.com/vet_desk' },
