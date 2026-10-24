@@ -36,7 +36,7 @@ const el = {
     pause: 'Παύση',
     play: 'Αναπαραγωγή',
     slideOf: 'από',
-    slides: ['Πίνακας ελέγχου', 'Ημερολόγιο ραντεβού', 'Ιστορικό ασθενούς', 'Υπενθυμίσεις', 'Χρεώσεις'],
+    slides: ['Πίνακας ελέγχου', 'Ημερολόγιο ραντεβού', 'Ιστορικό ασθενούς', 'Υπενθυμίσεις', 'Χρεώσεις', 'Νοσηλεία & Εξιτήριο'],
   },
   marquee: {
     label: 'Λειτουργίες VetDesk',
@@ -232,7 +232,7 @@ const en: typeof el = {
     pause: 'Pause',
     play: 'Play',
     slideOf: 'of',
-    slides: ['Dashboard', 'Appointment calendar', 'Patient record', 'Reminders', 'Billing'],
+    slides: ['Dashboard', 'Appointment calendar', 'Patient record', 'Reminders', 'Billing', 'Hospitalisation & Discharge'],
   },
   marquee: {
     label: 'VetDesk features',
