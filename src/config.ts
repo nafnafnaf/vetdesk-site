@@ -12,6 +12,6 @@ export const site = {
     { id: 'facebook', label: 'Facebook', href: 'https://www.facebook.com/vetdesk' }, // TODO
     { id: 'instagram', label: 'Instagram', href: 'https://www.instagram.com/vet_desk' },
     { id: 'viber', label: 'Viber', href: 'viber://chat?number=%2B306938025100' },
-    { id: 'youtube', label: 'YouTube', href: 'https://www.youtube.com/@vetdesk' }, // TODO
+
   ],
 } as const;
