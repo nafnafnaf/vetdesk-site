@@ -376,7 +376,7 @@ const en: typeof el = {
         q: 'Is my data safe?',
         a: "Each clinic's data is kept separate from all others and backups are created regularly. On every log out you have the option to download all clinic files locally.",
       },
-      { q: 'Do I need to install anything?', a: 'No. It runs in the browser, on a computer or tablet.' },
+      { q: 'Do I need to install anything?', a: 'No. It runs in the browser, on a computer or tablet. A native Android/iOS app is coming soon.' },
       { q: 'Is training included?', a: 'Yes. We start with a short training session for your team.' },
       {
         q: 'Will there be a mobile app?',
