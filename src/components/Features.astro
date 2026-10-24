@@ -37,12 +37,27 @@ const t = ui[lang].features;
                     <img src="/screenshots/records-01-lab-results.png" alt="Αποτελέσματα εξέτασης" loading="lazy" />
                     <img src="/screenshots/records-02-new-entry.png" alt="Νέα κλινική εγγραφή" loading="lazy" />
                     <img src="/screenshots/records-03-ai-assistant.png" alt="Ψηφιακός Βοηθός" loading="lazy" />
+                    <img src="/screenshots/records-04-visit-history.png" alt="Ιστορικό επισκέψεων" loading="lazy" />
+                    <img src="/screenshots/records-05-vaccines.png" alt="Εμβολιασμοί" loading="lazy" />
+                    <img src="/screenshots/records-06-differential.png" alt="Διαφορική διάγνωση" loading="lazy" />
+                    <img src="/screenshots/records-07-full-history.png" alt="Πλήρες ιστορικό" loading="lazy" />
                   </>}
                 </div>
                 <div class="feat-gallery-dots" aria-hidden="true">
-                  <button class="feat-dot active" data-feat-dot="0"></button>
-                  <button class="feat-dot" data-feat-dot="1"></button>
-                  <button class="feat-dot" data-feat-dot="2"></button>
+                  {f.id === 'appointments' && <>
+                    <button class="feat-dot active" data-feat-dot="0"></button>
+                    <button class="feat-dot" data-feat-dot="1"></button>
+                    <button class="feat-dot" data-feat-dot="2"></button>
+                  </>}
+                  {f.id === 'records' && <>
+                    <button class="feat-dot active" data-feat-dot="0"></button>
+                    <button class="feat-dot" data-feat-dot="1"></button>
+                    <button class="feat-dot" data-feat-dot="2"></button>
+                    <button class="feat-dot" data-feat-dot="3"></button>
+                    <button class="feat-dot" data-feat-dot="4"></button>
+                    <button class="feat-dot" data-feat-dot="5"></button>
+                    <button class="feat-dot" data-feat-dot="6"></button>
+                  </>}
                 </div>
               </div>
             ) : (
