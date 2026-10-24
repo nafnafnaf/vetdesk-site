@@ -8,19 +8,6 @@ const cmp = t.pricing.compare;
 ---
 <section id="pricing" class="section section-alt">
   <div class="container">
-    <div class="section-head center">
-      <h2>{t.pricing.title}</h2>
-      <p class="lead" style="margin-inline:auto;">{t.pricing.subtitle}</p>
-    </div>
-    <div class="card price-card">
-      <h3>{t.pricing.cardTitle}</h3>
-      <p>{t.pricing.cardText}</p>
-      <ul>
-        {t.pricing.bullets.map((b) => <li>{b}</li>)}
-      </ul>
-      <a class="btn btn-primary" href={`${base}#contact`}>{t.cta.demo}</a>
-    </div>
-
     <!-- Comparison table -->
     <div class="compare-wrap">
       <h3 class="compare-title">{cmp.title}</h3>
