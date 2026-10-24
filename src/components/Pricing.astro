@@ -11,6 +11,13 @@ const cmp = t.pricing.compare;
     <!-- Comparison table -->
     <div class="compare-wrap">
       <h3 class="compare-title">{cmp.title}</h3>
+      <div class="promo-ticker" aria-label="Προσφορά">
+        <div class="promo-inner">
+          <span>🔔 ΠΡΟΣΦΟΡΑ μέχρι 31 Δεκ. 2026 &mdash; Όλες οι συνδρομές ΔΩΡΕΑΝ</span>
+          <span aria-hidden="true">🔔 ΠΡΟΣΦΟΡΑ μέχρι 31 Δεκ. 2026 &mdash; Όλες οι συνδρομές ΔΩΡΕΑΝ</span>
+          <span aria-hidden="true">🔔 ΠΡΟΣΦΟΡΑ μέχρι 31 Δεκ. 2026 &mdash; Όλες οι συνδρομές ΔΩΡΕΑΝ</span>
+        </div>
+      </div>
       <div class="compare-scroll">
         <table class="compare-table">
           <thead>
@@ -38,13 +45,6 @@ const cmp = t.pricing.compare;
         </table>
       </div>
       <p class="compare-note">{cmp.note}</p>
-      <div class="promo-ticker" aria-label="Προσφορά">
-        <div class="promo-inner">
-          <span>🔔 ΠΡΟΣΦΟΡΑ μέχρι 31 Δεκ. 2026 &mdash; Όλες οι συνδρομές ΔΩΡΕΑΝ</span>
-          <span aria-hidden="true">🔔 ΠΡΟΣΦΟΡΑ μέχρι 31 Δεκ. 2026 &mdash; Όλες οι συνδρομές ΔΩΡΕΑΝ</span>
-          <span aria-hidden="true">🔔 ΠΡΟΣΦΟΡΑ μέχρι 31 Δεκ. 2026 &mdash; Όλες οι συνδρομές ΔΩΡΕΑΝ</span>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -154,7 +154,8 @@ const cmp = t.pricing.compare;
   }
   /* ── Promo ticker ── */
   .promo-ticker {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     border-radius: 12px;
     background: #fff7ed;
     border: 2px solid #fed7aa;
