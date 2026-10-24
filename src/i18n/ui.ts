@@ -106,6 +106,7 @@ const el = {
         text: 'Έκδοση παραστατικών προσαρμοσμένων σύμφωνα με τα πρότυπα του MYDATA, με ιστορικό χρεώσεων ανά πελάτη.',
         bullets: [
           'Τιμολόγηση μέσω πιστοποιημένου παρόχου.',
+          'Έκδοση όλων των συνηθισμένων τύπων παραστατικών καθώς και των αντιλογιστικών τους.',
           'Άμεση αποστολή παραστατικών στην ΑΑΔΕ — υποστήριξη B2C, B2B, B2G και παραστατικών αντιλογιστικής.',
           'Αναφορές εσόδων/εξόδων ανά μήνα και έτος.',
         ],
@@ -300,6 +301,7 @@ const en: typeof el = {
         text: 'Documents issued in compliance with MYDATA standards, with billing history per client.',
         bullets: [
           'Invoicing through a certified provider.',
+          'Issue all common document types including credit notes.',
           'Instant submission of documents to AADE (Greek tax authority) — B2C, B2B, B2G and credit note documents supported.',
           'Income/expense reports per month and year.',
         ],
