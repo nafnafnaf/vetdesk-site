@@ -4,6 +4,7 @@ interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = ui[lang];
 const base = homePath(lang);
+const cmp = t.pricing.compare;
 ---
 <section id="pricing" class="section section-alt">
   <div class="container">
@@ -19,5 +20,120 @@ const base = homePath(lang);
       </ul>
       <a class="btn btn-primary" href={`${base}#contact`}>{t.cta.demo}</a>
     </div>
+
+    <!-- Comparison table -->
+    <div class="compare-wrap">
+      <h3 class="compare-title">{cmp.title}</h3>
+      <div class="compare-scroll">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th class="feat-col"></th>
+              {cmp.plans.map((p) => (
+                <th>
+                  <span class="plan-name">{p.name}</span>
+                  <span class="plan-badge">{p.badge}</span>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {cmp.rows.map((row, i) => (
+              <tr class={i % 2 === 0 ? 'row-even' : ''}>
+                <td class="feat-col">{row.feature}</td>
+                <td class="check-col">{row.solo  ? <span class="yes" aria-label="✓">✓</span> : <span class="no" aria-label="✗">✗</span>}</td>
+                <td class="check-col">{row.small ? <span class="yes" aria-label="✓">✓</span> : <span class="no" aria-label="✗">✗</span>}</td>
+                <td class="check-col">{row.big   ? <span class="yes" aria-label="✓">✓</span> : <span class="no" aria-label="✗">✗</span>}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </section>
+
+<style>
+  .compare-wrap {
+    margin-top: 3rem;
+  }
+  .compare-title {
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    color: var(--text);
+  }
+  .compare-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 12px color-mix(in srgb, var(--text) 6%, transparent);
+  }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    min-width: 480px;
+  }
+  .compare-table thead tr {
+    background: var(--primary);
+    color: var(--on-primary);
+  }
+  .compare-table thead th {
+    padding: 14px 16px;
+    text-align: center;
+    font-weight: 700;
+  }
+  .compare-table thead th.feat-col {
+    text-align: left;
+    width: 46%;
+  }
+  .plan-name {
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+  .plan-badge {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    opacity: 0.82;
+    margin-top: 2px;
+  }
+  .compare-table tbody tr {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+  }
+  .compare-table tbody tr:last-child {
+    border-bottom: none;
+  }
+  .compare-table tbody tr.row-even {
+    background: var(--bg-alt);
+  }
+  .compare-table tbody tr:hover {
+    background: color-mix(in srgb, var(--primary) 6%, var(--surface));
+  }
+  .feat-col {
+    padding: 13px 16px;
+    text-align: left;
+    color: var(--text);
+    font-weight: 500;
+  }
+  .check-col {
+    padding: 13px 16px;
+    text-align: center;
+    width: 18%;
+  }
+  .yes {
+    color: var(--primary);
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  .no {
+    color: var(--muted);
+    font-size: 1.1rem;
+  }
+</style>

@@ -136,6 +136,26 @@ const el = {
     cardTitle: 'Ανά κλινική',
     cardText: 'Επικοινωνήστε για προσφορά. Χωρίς κρυφές χρεώσεις.',
     bullets: ['Δωρεάν παρουσίαση', 'Βοήθεια με τη μεταφορά δεδομένων', 'Υποστήριξη στα ελληνικά'],
+    compare: {
+      title: 'Σύγκριση πλάνων',
+      plans: [
+        { name: 'Solo', badge: 'Μικρό Ιατρείο' },
+        { name: 'Small', badge: 'Κλινική' },
+        { name: 'Big', badge: 'Νοσοκομείο & AI' },
+      ],
+      rows: [
+        { feature: 'Απεριόριστοι ασθενείς & επισκέψεις', solo: true, small: true, big: true },
+        { feature: 'Ημερολόγιο ραντεβού', solo: true, small: true, big: true },
+        { feature: 'SMS & Email ειδοποιήσεις', solo: true, small: true, big: true },
+        { feature: 'Υπενθυμίσεις εμβολίων & αντιπαρασιτικών', solo: true, small: true, big: true },
+        { feature: 'Εργαστηριακά αποτελέσματα', solo: true, small: true, big: true },
+        { feature: 'Αρχεία & Εικόνες (DICOM, JPG, PDF)', solo: true, small: true, big: true },
+        { feature: 'Αποθήκη & Αναλώσιμα', solo: true, small: true, big: true },
+        { feature: 'Έκδοση παραστατικών (myDATA)', solo: true, small: true, big: true },
+        { feature: 'AI Διαφορική Διάγνωση', solo: false, small: false, big: true },
+        { feature: 'Portal πελατών', solo: false, small: true, big: true },
+      ],
+    },
   },
   faq: {
     title: 'Συχνές ερωτήσεις',
@@ -310,6 +330,26 @@ const en: typeof el = {
     cardTitle: 'Per clinic',
     cardText: 'Get in touch for a quote. No hidden fees.',
     bullets: ['Free demo', 'Help with data migration', 'Support in Greek'],
+    compare: {
+      title: 'Plan comparison',
+      plans: [
+        { name: 'Solo', badge: 'Small practice' },
+        { name: 'Small', badge: 'Clinic' },
+        { name: 'Big', badge: 'Hospital & AI' },
+      ],
+      rows: [
+        { feature: 'Unlimited patients & visits', solo: true, small: true, big: true },
+        { feature: 'Appointment calendar', solo: true, small: true, big: true },
+        { feature: 'SMS & Email notifications', solo: true, small: true, big: true },
+        { feature: 'Vaccine & antiparasitic reminders', solo: true, small: true, big: true },
+        { feature: 'Lab results', solo: true, small: true, big: true },
+        { feature: 'Files & Images (DICOM, JPG, PDF)', solo: true, small: true, big: true },
+        { feature: 'Warehouse & consumables', solo: true, small: true, big: true },
+        { feature: 'Invoicing (myDATA)', solo: true, small: true, big: true },
+        { feature: 'AI Differential Diagnosis', solo: false, small: false, big: true },
+        { feature: 'Client portal', solo: false, small: true, big: true },
+      ],
+    },
   },
   faq: {
     title: 'Frequently asked questions',
