@@ -174,9 +174,9 @@ const el = {
       },
       {
         q: 'Είναι ασφαλή τα δεδομένα μου;',
-        a: 'Τα δεδομένα κάθε κλινικής είναι διαχωρισμένα από των υπολοίπων και δημιουργούνται τακτικά αντίγραφα ασφαλείας.',
+        a: 'Τα δεδομένα κάθε κλινικής είναι διαχωρισμένα από των υπολοίπων και δημιουργούνται τακτικά αντίγραφα ασφαλείας. Σε κάθε log out σας δίνεται η δυνατότητα να κατεβάσετε τοπικά όλα τα αρχεία του κτηνιατρείου.',
       },
-      { q: 'Χρειάζεται εγκατάσταση;', a: 'Όχι. Λειτουργεί από τον browser, σε υπολογιστή ή tablet.' },
+      { q: 'Χρειάζεται εγκατάσταση;', a: 'Όχι. Λειτουργεί από τον browser, σε υπολογιστή ή tablet. Σύντομα θα εκδώσουμε εφαρμογή για κινητά Android/iOS.' },
       { q: 'Υπάρχει εκπαίδευση;', a: 'Ναι. Ξεκινάμε με σύντομη εκπαίδευση της ομάδας σας.' },
       {
         q: 'Θα υπάρχει εφαρμογή για κινητό;',
@@ -374,7 +374,7 @@ const en: typeof el = {
       },
       {
         q: 'Is my data safe?',
-        a: "Each clinic's data is kept separate from all others and backups are created regularly.",
+        a: "Each clinic's data is kept separate from all others and backups are created regularly. On every log out you have the option to download all clinic files locally.",
       },
       { q: 'Do I need to install anything?', a: 'No. It runs in the browser, on a computer or tablet.' },
       { q: 'Is training included?', a: 'Yes. We start with a short training session for your team.' },
