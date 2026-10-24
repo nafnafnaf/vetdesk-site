@@ -140,10 +140,11 @@ const el = {
     bullets: ['Δωρεάν παρουσίαση', 'Βοήθεια με τη μεταφορά δεδομένων', 'Υποστήριξη στα ελληνικά'],
     compare: {
       title: 'Σύγκριση πλάνων',
+      note: '* Οι χρεώσεις για τον πάροχο ηλεκτρονικής τιμολόγησης και αποστολής SMS δεν συμπεριλαμβάνονται.',
       plans: [
-        { name: 'Solo', badge: 'Μικρό Ιατρείο' },
-        { name: 'Small', badge: 'Κλινική' },
-        { name: 'Big', badge: 'Νοσοκομείο & AI' },
+        { name: 'Solo', badge: 'Μικρό Ιατρείο (μέχρι 2 κτηνίατροι)', price: '25€', period: '/μήνα πλέον ΦΠΑ' },
+        { name: 'Small', badge: 'μέχρι 4 κτηνίατροι & γραμματεία', price: '45€', period: '/μήνα πλέον ΦΠΑ' },
+        { name: 'Big', badge: 'Απεριόριστοι κτηνίατροι', price: '80€', period: '/μήνα πλέον ΦΠΑ' },
       ],
       rows: [
         { feature: 'Απεριόριστοι ασθενείς & επισκέψεις', solo: true, small: true, big: true },
@@ -154,8 +155,7 @@ const el = {
         { feature: 'Αρχεία & Εικόνες (DICOM, JPG, PDF)', solo: true, small: true, big: true },
         { feature: 'Αποθήκη & Αναλώσιμα', solo: true, small: true, big: true },
         { feature: 'Έκδοση παραστατικών (myDATA)', solo: true, small: true, big: true },
-        { feature: 'AI Διαφορική Διάγνωση', solo: false, small: false, big: true },
-        { feature: 'Portal πελατών', solo: false, small: true, big: true },
+        { feature: 'AI Διαφορική Διάγνωση', solo: true, small: true, big: true },
       ],
     },
   },
@@ -334,10 +334,11 @@ const en: typeof el = {
     bullets: ['Free demo', 'Help with data migration', 'Support in Greek'],
     compare: {
       title: 'Plan comparison',
+      note: '* E-invoicing provider and SMS sending fees are not included.',
       plans: [
-        { name: 'Solo', badge: 'Small practice' },
-        { name: 'Small', badge: 'Clinic' },
-        { name: 'Big', badge: 'Hospital & AI' },
+        { name: 'Solo', badge: 'Small practice (up to 2 vets)', price: '25€', period: '/month excl. VAT' },
+        { name: 'Small', badge: 'Up to 4 vets & reception', price: '45€', period: '/month excl. VAT' },
+        { name: 'Big', badge: 'Unlimited vets', price: '80€', period: '/month excl. VAT' },
       ],
       rows: [
         { feature: 'Unlimited patients & visits', solo: true, small: true, big: true },
@@ -348,8 +349,7 @@ const en: typeof el = {
         { feature: 'Files & Images (DICOM, JPG, PDF)', solo: true, small: true, big: true },
         { feature: 'Warehouse & consumables', solo: true, small: true, big: true },
         { feature: 'Invoicing (myDATA)', solo: true, small: true, big: true },
-        { feature: 'AI Differential Diagnosis', solo: false, small: false, big: true },
-        { feature: 'Client portal', solo: false, small: true, big: true },
+        { feature: 'AI Differential Diagnosis', solo: true, small: true, big: true },
       ],
     },
   },

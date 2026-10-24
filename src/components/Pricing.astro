@@ -32,6 +32,7 @@ const cmp = t.pricing.compare;
               {cmp.plans.map((p) => (
                 <th>
                   <span class="plan-name">{p.name}</span>
+                  <span class="plan-price">{p.price}<span class="plan-period">{p.period}</span></span>
                   <span class="plan-badge">{p.badge}</span>
                 </th>
               ))}
@@ -49,6 +50,7 @@ const cmp = t.pricing.compare;
           </tbody>
         </table>
       </div>
+      <p class="compare-note">{cmp.note}</p>
     </div>
   </div>
 </section>
@@ -95,12 +97,31 @@ const cmp = t.pricing.compare;
     font-size: 1rem;
     font-weight: 800;
   }
+  .plan-price {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-top: 4px;
+    line-height: 1;
+  }
+  .plan-period {
+    font-size: 0.68rem;
+    font-weight: 500;
+    opacity: 0.78;
+    margin-left: 2px;
+  }
   .plan-badge {
     display: block;
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     font-weight: 500;
-    opacity: 0.82;
-    margin-top: 2px;
+    opacity: 0.75;
+    margin-top: 4px;
+  }
+  .compare-note {
+    margin-top: 1rem;
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: center;
   }
   .compare-table tbody tr {
     background: var(--surface);
