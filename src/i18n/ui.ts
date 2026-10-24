@@ -102,7 +102,7 @@ const el = {
       },
       {
         id: 'invoicing',
-        title: 'Τιμολόγηση χωρίς κρυφές χρεώσεις',
+        title: 'Tokens τιμολόγησης χωρίς κρυφές χρεώσεις',
         text: 'Έκδοση παραστατικών προσαρμοσμένων σύμφωνα με τα πρότυπα του MYDATA, με ιστορικό χρεώσεων ανά πελάτη.',
         bullets: [
           'Τιμολόγηση μέσω πιστοποιημένου παρόχου.',
@@ -296,7 +296,7 @@ const en: typeof el = {
       },
       {
         id: 'invoicing',
-        title: 'Invoicing without hidden fees',
+        title: 'Invoicing Tokens without hidden fees',
         text: 'Documents issued in compliance with MYDATA standards, with billing history per client.',
         bullets: [
           'Invoicing through a certified provider.',
