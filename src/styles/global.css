@@ -200,6 +200,8 @@ p { margin: 0 0 1em; }
 /* Contact */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 5vw, 64px); align-items: start; }
 @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
+.contact-single { max-width: 540px; margin-inline: auto; text-align: center; }
+.contact-single .direct { justify-content: center; }
 .form { display: grid; gap: 14px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow); }
 .form label { display: grid; gap: 6px; font-weight: 600; font-size: 0.92rem; }
 .form input, .form textarea {

@@ -5,60 +5,16 @@ import Socials from './Socials.astro';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = ui[lang].contact;
-const send = ui[lang].cta.send;
 ---
 <section id="contact" class="section section-alt">
-  <div class="container contact-grid">
-    <div>
-      <h2>{t.title}</h2>
-      <p class="lead">{t.subtitle}</p>
-      <p class="muted"><strong>{t.alt}</strong></p>
-      <div class="direct">
-        <a class="btn btn-ghost btn-sm" href={`mailto:${site.email}`}>{site.email}</a>
-        <a class="btn btn-ghost btn-sm" href={site.viber}>Viber</a>
-        <a class="btn btn-ghost btn-sm" href={site.whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp</a>
-      </div>
-      <Socials />
+  <div class="container contact-single">
+    <h2>{t.title}</h2>
+    <p class="lead">{t.subtitle}</p>
+    <p class="muted"><strong>{t.alt}</strong></p>
+    <div class="direct">
+      <a class="btn btn-ghost btn-sm" href={`mailto:${site.email}`}>{site.email}</a>
+      <a class="btn btn-ghost btn-sm" href={site.viber}>Viber</a>
     </div>
-
-    <form
-      id="demo-form"
-      class="form"
-      method="post"
-      action={site.formEndpoint || undefined}
-      data-endpoint={site.formEndpoint}
-      data-email={site.email}
-      data-subject={t.mailSubject}
-    >
-      <label>{t.name}<input name="name" type="text" autocomplete="name" required /></label>
-      <label>{t.clinic}<input name="clinic" type="text" autocomplete="organization" /></label>
-      <div class="two">
-        <label>{t.email}<input name="email" type="email" autocomplete="email" required /></label>
-        <label>{t.phone}<input name="phone" type="tel" autocomplete="tel" /></label>
-      </div>
-      <label>{t.message}<textarea name="message" rows="4"></textarea></label>
-      <input class="hp" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
-      <button class="btn btn-primary" type="submit">{send}</button>
-    </form>
+    <Socials />
   </div>
 </section>
-
-<script>
-  const form = document.getElementById('demo-form') as HTMLFormElement | null;
-  form?.addEventListener('submit', (e) => {
-    // Without an endpoint, fall back to the visitor's mail client.
-    if (form.dataset.endpoint) return;
-    e.preventDefault();
-    const d = new FormData(form);
-    if (d.get('website')) return; // honeypot
-    const body = [
-      `${d.get('name') ?? ''}`,
-      `${d.get('clinic') ?? ''}`,
-      `${d.get('email') ?? ''}`,
-      `${d.get('phone') ?? ''}`,
-      '',
-      `${d.get('message') ?? ''}`,
-    ].join('\n');
-    window.location.href = `mailto:${form.dataset.email}?subject=${encodeURIComponent(form.dataset.subject ?? '')}&body=${encodeURIComponent(body)}`;
-  });
-</script>
