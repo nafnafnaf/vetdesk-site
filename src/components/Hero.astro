@@ -56,18 +56,7 @@ const N = slides.length;
                   )}
 
                   {i === 1 && (
-                    <div class="mock-content">
-                      <div class="mock-cal-head">
-                        {['ΔΕ','ΤΡ','ΤΕ','ΠΕ','ΠΑ','ΣΑ','ΚΥ'].map(d => <span>{d}</span>)}
-                      </div>
-                      <div class="mock-cal-grid">
-                        {Array.from({length: 35}, (_, j) => (
-                          <div class={['cal-day', [2,7,9,14,20,27].includes(j) ? 'has-appt' : '', j === 20 ? 'today' : ''].filter(Boolean).join(' ')}>
-                            {j < 31 ? j + 1 : ''}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                    <img src="/screenshots/hero-calendar.png" alt={slides[1]} class="slide-img" />
                   )}
 
                   {i === 2 && (
