@@ -142,6 +142,10 @@ const el = {
     bullets: ['Δωρεάν παρουσίαση', 'Βοήθεια με τη μεταφορά δεδομένων', 'Υποστήριξη στα ελληνικά'],
     compare: {
       title: 'Σύγκριση πλάνων',
+      headerNotes: [
+        'Στα ετήσια πακέτα ισχύει έκπτωση 2 μηνών.',
+        'Για custom λύσεις/εφαρμογές σας αποστέλνουμε προσφορά μετά από συζήτηση μαζί σας.',
+      ],
       note: '* Οι χρεώσεις για τον πάροχο ηλεκτρονικής τιμολόγησης και αποστολής SMS δεν συμπεριλαμβάνονται.',
       plans: [
         { name: 'Solo', badge: 'Μικρό Ιατρείο (μέχρι 2 κτηνίατροι)', price: '25€', period: '/μήνα πλέον ΦΠΑ' },
@@ -338,6 +342,10 @@ const en: typeof el = {
     bullets: ['Free demo', 'Help with data migration', 'Support in Greek'],
     compare: {
       title: 'Plan comparison',
+      headerNotes: [
+        'Annual plans include a 2-month discount.',
+        'For custom solutions / applications we send you a quote after a discussion.',
+      ],
       note: '* E-invoicing provider and SMS sending fees are not included.',
       plans: [
         { name: 'Solo', badge: 'Small practice (up to 2 vets)', price: '25€', period: '/month excl. VAT' },

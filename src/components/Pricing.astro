@@ -18,15 +18,13 @@ const cmp = t.pricing.compare;
           <span aria-hidden="true">🔔 ΠΡΟΣΦΟΡΑ μέχρι 31 Δεκ. 2026 &mdash; Όλες οι συνδρομές ΔΩΡΕΑΝ</span>
         </div>
       </div>
-      <div class="compare-pre-note">
-        <p>Στα ετήσια πακέτα ισχύει έκπτωση 2 μηνών.</p>
-        <p>Για custom λύσεις/εφαρμογές σας αποστέλνουμε προσφορά μετά από συζήτηση μαζί σας.</p>
-      </div>
       <div class="compare-scroll">
         <table class="compare-table">
           <thead>
             <tr>
-              <th class="feat-col"></th>
+              <th class="feat-col">
+                {cmp.headerNotes.map((n) => <p class="header-note">{n}</p>)}
+              </th>
               {cmp.plans.map((p) => (
                 <th>
                   <span class="plan-name">{p.name}</span>
@@ -188,18 +186,13 @@ const cmp = t.pricing.compare;
     .promo-inner { animation: none; }
     .promo-inner span:not(:first-child) { display: none; }
   }
-  .compare-pre-note {
-    max-width: 52%;
-    margin-bottom: 0.85rem;
+  .header-note {
+    margin: 0 0 0.35rem;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--on-primary);
+    opacity: 0.88;
+    line-height: 1.45;
   }
-  .compare-pre-note p {
-    margin: 0 0 0.3rem;
-    font-size: 0.82rem;
-    color: var(--muted);
-    line-height: 1.5;
-  }
-  .compare-pre-note p:last-child { margin-bottom: 0; }
-  @media (max-width: 600px) {
-    .compare-pre-note { max-width: 100%; }
-  }
+  .header-note:last-child { margin-bottom: 0; }
 </style>
