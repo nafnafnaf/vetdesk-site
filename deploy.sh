@@ -1,16 +1,7 @@
 #!/bin/sh
-# Pull latest, build at low priority (so clinic containers stay up), then restart.
+# Pull pre-built dist and restart Caddy. No build on server.
 set -e
-
 cd "$(dirname "$0")"
-
 git pull origin feat/carousel-marquee
-git rev-parse --short HEAD > public/VERSION
-
-echo "Building image (low priority)..."
-nice -n 19 docker compose build
-
-echo "Restarting container..."
-docker compose up -d
-
+docker compose up -d --build
 echo "Done."

@@ -1,5 +1,4 @@
 node_modules
-dist
 .astro
 media/videos/*
 !media/videos/.gitkeep
