@@ -25,7 +25,7 @@ const t = ui[lang].features;
             )}
           </div>
           <div class="feature-media">
-            {(f.id === 'appointments' || f.id === 'records' || f.id === 'reminders' || f.id === 'warehouse') ? (
+            {(f.id === 'appointments' || f.id === 'records' || f.id === 'reminders' || f.id === 'warehouse' || f.id === 'invoicing') ? (
               <div class="feat-gallery" data-feat-gallery>
                 <div class="feat-gallery-track" data-feat-track>
                   {f.id === 'appointments' && <>
@@ -40,6 +40,10 @@ const t = ui[lang].features;
                     <img src="/screenshots/warehouse-01-stock.png" alt="Αποθήκη" loading="lazy" />
                     <img src="/screenshots/warehouse-02-order.png" alt="Παραγγελία" loading="lazy" />
                     <img src="/screenshots/warehouse-03-edit-product.png" alt="Επεξεργασία προϊόντος" loading="lazy" />
+                  </>}
+                  {f.id === 'invoicing' && <>
+                    <img src="/screenshots/invoicing-01-list.png" alt="Παραστατικά" loading="lazy" />
+                    <img src="/screenshots/invoicing-02-detail.png" alt="Παραστατικό" loading="lazy" />
                   </>}
                   {f.id === 'records' && <>
                     <img src="/screenshots/records-01-lab-results.png" alt="Αποτελέσματα εξέτασης" loading="lazy" />
@@ -64,6 +68,10 @@ const t = ui[lang].features;
                     <button class="feat-dot active" data-feat-dot="0"></button>
                     <button class="feat-dot" data-feat-dot="1"></button>
                     <button class="feat-dot" data-feat-dot="2"></button>
+                  </>}
+                  {f.id === 'invoicing' && <>
+                    <button class="feat-dot active" data-feat-dot="0"></button>
+                    <button class="feat-dot" data-feat-dot="1"></button>
                   </>}
                   {f.id === 'records' && <>
                     <button class="feat-dot active" data-feat-dot="0"></button>
