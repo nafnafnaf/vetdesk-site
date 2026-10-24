@@ -2,6 +2,7 @@ FROM node:24-alpine AS build
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci
+RUN npx astro telemetry disable
 COPY . .
 RUN npm run build
 
