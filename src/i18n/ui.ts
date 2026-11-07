@@ -81,10 +81,11 @@ const el = {
       },
       {
         id: 'lab-scanning',
-        title: 'Εύκολη καταχώρηση αποτελεσμάτων αιματολογικών / βιοχημικών / κιτ',
+        title: 'Εύκολη καταχώρηση αποτελεσμάτων αιματολογικών / βιοχημικών / κιτ / DICOM',
         text: 'Ανάγνωση και εισαγωγή παραμέτρων και των τιμών τους από αποτελέσματα εξετάσεων αυτόματα μέσω κινητού ή με απλό drag & drop του αρχείου μέσα στο φάκελο της εξέτασης.',
         bullets: [
           'Αυτόματη ανάγνωση και εισαγωγή αποτελεσμάτων εξετάσεων μέσω του κινητού του κτηνίατρου ή drag & drop από εκτυπώσεις — όλες οι παράμετροι και οι τιμές τους καταχωρούνται σωστά.',
+          'Ανεβάστε αρχεία DICOM, JPG ή PDF ακτινογραφιών και λάβετε άμεσα πλήρη Κτηνιατρική Ακτινολογική Έκθεση με την Ανάλυση Εικόνας VetDesk.',
           'Αυτόματη αναγνώριση διαγνωστικών κιτ με αναφορά του βαθμού εγκυρότητας.',
           'Εύκολη αποστολή των αποτελεσμάτων στους πελάτες σας μέσω QR code / email.',
           'Εύκολη συνταγογράφηση και αποστολή της στους πελάτες σας με ένα κλικ.',
@@ -284,10 +285,11 @@ const en: typeof el = {
       },
       {
         id: 'lab-scanning',
-        title: 'Easy entry of haematology / biochemistry / kit results',
+        title: 'Easy entry of haematology / biochemistry / kit / DICOM results',
         text: 'Automatic reading and import of exam parameters and values via mobile camera or simple drag & drop of the file into the examination record.',
         bullets: [
           "Automatic reading and import of lab results via the vet's mobile or by drag & drop from printouts — all parameters and values entered correctly.",
+          'Upload DICOM, JPG or PDF radiology files and instantly receive a full Veterinary Radiology Report with VetDesk Image Analysis.',
           'Automatic recognition of diagnostic kits with a validity score report.',
         ],
       },
