@@ -92,6 +92,16 @@ const el = {
         ],
       },
       {
+        id: 'dosing',
+        title: 'Έλεγχος Δοσολογίας & Αλληλεπιδράσεων Φαρμάκων',
+        text: 'Άμεσος έλεγχος συνταγογράφησης με οδηγίες δοσολογίας για εκατοντάδες ουσίες και τους συνδυασμούς τους — πριν η συνταγή εκδοθεί.',
+        bullets: [
+          'Ο κτηνίατρος ενημερώνεται για εκατοντάδες φαρμακευτικές ουσίες και τους συνδυασμούς τους, με άμεση αναφορά πιθανών αλληλεπιδράσεων.',
+          'Τα συνταγογραφημένα φάρμακα ελέγχονται αυτόματα για ορθότητα δόσης βάσει είδους, βάρους και ηλικίας του ζώου.',
+          'Προτάσεις δοσολογικής αγωγής με δυνατότητα άμεσης εφαρμογής στη συνταγή με ένα κλικ.',
+        ],
+      },
+      {
         id: 'warehouse',
         title: 'Αποθήκη & Διαχείριση Αναλωσίμων',
         text: 'Παρακολούθηση αποθέματος φαρμάκων και ειδών σε πραγματικό χρόνο, με αυτόματες παραγγελίες και άμεση σύνδεση με τιμολόγηση.',
@@ -291,6 +301,16 @@ const en: typeof el = {
           "Automatic reading and import of lab results via the vet's mobile or by drag & drop from printouts — all parameters and values entered correctly.",
           'Upload DICOM, JPG or PDF radiology files and instantly receive a full Veterinary Radiology Report with VetDesk Image Analysis.',
           'Automatic recognition of diagnostic kits with a validity score report.',
+        ],
+      },
+      {
+        id: 'dosing',
+        title: 'Drug Dosing & Interaction Checker',
+        text: 'Instant prescription review with dosing guidance for hundreds of substances and their combinations — before the prescription is issued.',
+        bullets: [
+          'The vet is advised on hundreds of pharmaceutical substances and their combinations, with instant flagging of potential interactions.',
+          'Prescribed medications are automatically checked for correct dosing based on species, weight and age of the animal.',
+          'Dosing regime suggestions with one-click application directly to the prescription.',
         ],
       },
       {

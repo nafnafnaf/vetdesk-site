@@ -25,7 +25,7 @@ const t = ui[lang].features;
             )}
           </div>
           <div class="feature-media">
-            {(f.id === 'appointments' || f.id === 'records' || f.id === 'reminders' || f.id === 'lab-scanning' || f.id === 'warehouse' || f.id === 'invoicing') ? (
+            {(f.id === 'appointments' || f.id === 'records' || f.id === 'reminders' || f.id === 'lab-scanning' || f.id === 'dosing' || f.id === 'warehouse' || f.id === 'invoicing') ? (
               <div class="feat-gallery" data-feat-gallery>
                 <div class="feat-gallery-track" data-feat-track>
                   {f.id === 'appointments' && <>
@@ -40,6 +40,11 @@ const t = ui[lang].features;
                     <img src="/screenshots/lab-01-entry-type.png" alt="Τύπος εγγραφής" loading="lazy" />
                     <img src="/screenshots/lab-02-blood-form.png" alt="Αιματολογική φόρμα" loading="lazy" />
                     <img src="/screenshots/lab-03-dicom.png" alt="DICOM Ακτινολογική Έκθεση" loading="lazy" />
+                  </>}
+                  {f.id === 'dosing' && <>
+                    <img src="/screenshots/dosing-01-check.png" alt="Έλεγχος δοσολογίας" loading="lazy" />
+                    <img src="/screenshots/dosing-02-crosscheck.png" alt="Διασταύρωση φαρμάκων" loading="lazy" />
+                    <img src="/screenshots/dosing-03-correction.png" alt="Διόρθωση δόσης" loading="lazy" />
                   </>}
                   {f.id === 'warehouse' && <>
                     <img src="/screenshots/warehouse-01-stock.png" alt="Αποθήκη" loading="lazy" />
@@ -70,6 +75,11 @@ const t = ui[lang].features;
                     <button class="feat-dot active" data-feat-dot="0"></button>
                   </>}
                   {f.id === 'lab-scanning' && <>
+                    <button class="feat-dot active" data-feat-dot="0"></button>
+                    <button class="feat-dot" data-feat-dot="1"></button>
+                    <button class="feat-dot" data-feat-dot="2"></button>
+                  </>}
+                  {f.id === 'dosing' && <>
                     <button class="feat-dot active" data-feat-dot="0"></button>
                     <button class="feat-dot" data-feat-dot="1"></button>
                     <button class="feat-dot" data-feat-dot="2"></button>
