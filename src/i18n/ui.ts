@@ -95,6 +95,7 @@ const el = {
         title: 'Αποθήκη & Διαχείριση Αναλωσίμων',
         text: 'Παρακολούθηση αποθέματος φαρμάκων και ειδών σε πραγματικό χρόνο, με αυτόματες παραγγελίες και άμεση σύνδεση με τιμολόγηση.',
         bullets: [
+          'Αυτόματη ενημέρωση αποθέματος από τιμολόγιο προμηθευτή — ανεβάστε το τιμολόγιο (PDF ή φωτογραφία) και το σύστημα αναγνωρίζει τα προϊόντα και τις ποσότητες, τα αντιστοιχεί με το απόθεμα της αποθήκης και προτείνει ενημέρωση στοκ με ένα κλικ.',
           'Πλήρης διαχείριση αποθήκης για είδη και φάρμακα — αυτόματη παρακολούθηση ποσότητας και αυτόματα email παραγγελιών προς τον προμηθευτή.',
           'Πώληση φαρμάκων και ειδών με άμεση αφαίρεση από το στοκ.',
           'Κατανάλωση φαρμάκων και αναλώσιμων για ζώα σε νοσηλεία με ταυτόχρονη αφαίρεση από το απόθεμα και τιμολόγηση στα έξοδα νοσηλείας.',
@@ -295,6 +296,7 @@ const en: typeof el = {
         title: 'Inventory & Consumables Management',
         text: 'Real-time tracking of medication and product stock, with automatic reorders and direct connection to billing.',
         bullets: [
+          'Automatic stock update from supplier invoices — upload the invoice (PDF or photo) and the system recognises products and quantities, matches them against your warehouse stock and proposes a one-click stock update.',
           'Full inventory management for products and medications — automatic stock-level monitoring and automatic order emails to the supplier.',
           'Sale of medications and products with immediate deduction from stock.',
           'Consumption of medications and consumables for hospitalised animals with simultaneous stock deduction and billing to hospitalisation costs.',
